@@ -21,6 +21,8 @@ gulp.task('build', ['build-all', 'sitemap'], function() {
         .pipe(inject(gulp.src(['src/partials/footer.html']), createInjectOptions('footer')))
         .pipe(inject(gulp.src(['src/partials/scripts.html']), createInjectOptions('scripts')))
         .pipe(inject(gulp.src(['src/partials/header.html']), createInjectOptions('header')))
+        .pipe(inject(gulp.src(['src/partials/blog-items.html']), createInjectOptions('blog-items')))
+        .pipe(inject(gulp.src(['src/partials/experience.html']), createInjectOptions('experience')))
         .pipe(useref({searchPath: ['.', '../', 'src']}))
         .pipe(inlineSource({rootpath: 'dist'}))
         .pipe(html)
