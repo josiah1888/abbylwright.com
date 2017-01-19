@@ -20,7 +20,7 @@ gulp.task('build', ['build-all', 'sitemap'], function() {
         .pipe(inject(gulp.src(['src/partials/head.html']), createInjectOptions('head')))
         .pipe(inject(gulp.src(['src/partials/footer.html']), createInjectOptions('footer')))
         .pipe(inject(gulp.src(['src/partials/scripts.html']), createInjectOptions('scripts')))
-        .pipe(inject(gulp.src(['src/partials/sidebar.html']), createInjectOptions('sidebar')))
+        .pipe(inject(gulp.src(['src/partials/header.html']), createInjectOptions('header')))
         .pipe(useref({searchPath: ['.', '../', 'src']}))
         .pipe(inlineSource({rootpath: 'dist'}))
         .pipe(html)
