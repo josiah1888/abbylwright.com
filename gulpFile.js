@@ -59,7 +59,7 @@ gulp.task('sitemap', function(done) {
 
     var pages = [
         { url: '/'},
-        ];
+    ];
  
     var sitemap = sm.createSitemap({
         hostname: 'https://abbylwright.com', 
